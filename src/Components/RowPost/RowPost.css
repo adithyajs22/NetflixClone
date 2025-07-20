@@ -1,18 +1,119 @@
-.poster{
-    margin-left:20px;
-    color:white;
+.row h2 {
+  color: white;
+  margin-left: 20px;
+  font-weight: bold;
+  position: relative;
+  display: inline-block;
+  margin: 10px;
 }
-.posters{
-    display:flex;
-    flex-direction: row;
-    padding:20px;
-    overflow-x: scroll;
-    overflow-y: hidden;
+
+.posters {
+  display: flex;
+  padding: 25px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none; 
 }
-.posters::-webkit-scrollbar{
-    display: none;
+
+.posters::-webkit-scrollbar {
+  display: none; 
 }
-.poster{
-    max-height: 250px;
-    margin-right: 10px;
+
+.poster {
+  max-height: 250px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+
+.poster:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.smallPoster {
+  max-height: 150px;
+  margin-right: 10px;
+  transition: transform 0.2s;
+}
+.smallPoster:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+.poster-container {
+  position: relative;
+  display: inline-block;
+  margin-right: 10px;
+
+}
+
+.poster, .smallPoster {
+  max-height: 250px;
+  transition: transform 0.3s ease;
+  border-radius: 6px;
+}
+
+.smallPoster {
+  max-height: 180px;
+}
+
+.poster-container:hover .poster,
+.poster-container:hover .smallPoster {
+  transform: scale(1.05);
+}
+
+.poster-title {
+  position:absolute;
+  padding-top:5px;
+  padding-right: 100px;
+  padding-bottom: 40px;
+  padding-left: 0px;
+  left:0;
+  top:0;
+  background-color: rgb(0, 0, 0,.3);
+  font-style: bold;
+font-weight: 100;
+  color: white;
+  font-size: 24px;
+  max-width: 22px;
+  text-align:left;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.poster-container:hover .poster-title {
+  opacity: 1;
+}
+
+.smalltag{
+  
+  position: absolute;
+  bottom: 65px;
+  left: 85px;
+  right:45px;
+  color: white;
+  padding: 10px 6px;
+  border-radius: 4px;
+  font-size: 22px;
+  z-index: 10;
+  opacity: 0;
+  font-style: bold;
+  animation: fadeIn 0.4s ease forwards;
+}
+.tag {
+  position: absolute;
+  bottom: 105px;
+  left: 50%;
+  transform: translateX(-50%);
+  color: white;
+  padding: 10px 16px;
+  border-radius: 4px;
+  font-size: 28px;
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 0.4s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
 }
