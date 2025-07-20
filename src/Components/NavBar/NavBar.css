@@ -20,13 +20,29 @@
     right:23px;
     cursor: pointer;
 }
-/* Wrapper holds both input and icon */
+
 .search-wrapper {
   position: fixed;
   top: 20px;
   right: 100px;
   width: 250px;
   height: 35px;
+}
+.movie-results {
+  padding: 20px;
+}
+.movies-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.movie-card {
+  width: 200px;
+  text-align: center;
+}
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
 }
 
 
@@ -77,4 +93,37 @@
     color:aliceblue;
     font-size: 24px;
     cursor: pointer;
+}
+.search-results {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: black;
+  z-index: 10;
+  position: relative;
+}
+
+.search-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.search-card {
+  width: 160px;
+  text-align: center;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.search-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.search-card:hover {
+  transform: scale(1.05);
 }

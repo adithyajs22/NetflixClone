@@ -8,3 +8,23 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     background-color: black;
 }
+.search-results {
+  margin: 20px;
+  color: white;
+}
+
+.row-posts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.search-poster {
+  width: 150px;
+  border-radius: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+.search-poster:hover {
+  transform: scale(1.05);
+}
